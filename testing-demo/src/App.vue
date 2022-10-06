@@ -3,18 +3,21 @@
     <NavBar />
     <img alt="Vue logo" src="./assets/logo.png">
     <TodoApp />
+    <ParentComponent />
   </div>
 </template>
 
 <script>
 import TodoApp from './components/TodoApp.vue';
 import NavBar from './components/NavBar.vue';
+import ParentComponent from './components/ParentComponent.vue';
 
 export default {
   name: 'App',
   components: {
     TodoApp,
-    NavBar
+    NavBar,
+    ParentComponent
 }
 }
 </script>
