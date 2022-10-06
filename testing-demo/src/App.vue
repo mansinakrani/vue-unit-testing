@@ -1,5 +1,6 @@
 <template>
   <div>
+    <NavBar />
     <img alt="Vue logo" src="./assets/logo.png">
     <TodoApp />
   </div>
@@ -7,11 +8,13 @@
 
 <script>
 import TodoApp from './components/TodoApp.vue';
+import NavBar from './components/NavBar.vue';
 
 export default {
   name: 'App',
   components: {
     TodoApp,
+    NavBar
 }
 }
 </script>
