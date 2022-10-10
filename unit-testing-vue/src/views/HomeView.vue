@@ -7,12 +7,12 @@
 
 <script>
 // @ is an alias to /src
-import AppHeader from "@/components/AppHeader.vue";
+import AppHeader from '@/components/AppHeader.vue'
 
 export default {
-  name: "HomeView",
+  name: 'HomeView',
   components: {
     AppHeader,
   },
-};
+}
 </script>
