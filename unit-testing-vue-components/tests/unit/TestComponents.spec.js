@@ -3,7 +3,7 @@
  */
 
 import TestComponent from "@/TestComponent";
-import { mount, shallowMount } from "@vue/test-utils";
+import { mount } from "@vue/test-utils";
 import List from "@/listComponent";
 
 // describe("TestComponent", () => {
@@ -17,7 +17,9 @@ test("mount a vue component", () => {
 });
 // });
 
-test("ListComponent Shallow", () => {
-  console.log(mount(List).html());
-  console.log(shallowMount(List).html());
+test("ListComponent", () => {
+  const wrapper = mount(List);
+  const movies = wrapper.vm.marvelMovies;
+  wrapper.setData({ marvelMovies: [...movies, "Endgame"] });
+  expect(wrapper.html()).toMatchSnapshot();
 });
