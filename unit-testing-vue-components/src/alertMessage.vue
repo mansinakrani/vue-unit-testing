@@ -11,14 +11,14 @@ export default {
     return {
       interval: undefined,
       counter: 0,
-      timer: 5
+      timer: 5,
     };
   },
 
   computed: {
     timeLeft() {
       return this.timer - this.counter;
-    }
+    },
   },
 
   mounted() {
@@ -28,14 +28,13 @@ export default {
     }, 1000);
   },
 
-  beforeDestroy() {
+  beforeUnmount() {
     clearInterval(this.interval);
     console.log("Alert removed!");
   },
 
-  destroyed() {
+  unmounted() {
     this.$el.remove();
-  }
+  },
 };
 </script>
-

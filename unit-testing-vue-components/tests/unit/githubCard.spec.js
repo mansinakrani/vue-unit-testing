@@ -21,6 +21,7 @@ describe("methods", () => {
     // const response = await fetch(this.url);
     // this.data = await response.json();
     const jsonMock = jest.fn().mockResolvedValue("GITHUB DATA");
+    jsonMock();
     window.fetch = jest.fn().mockResolvedValue({
       json: jsonMock,
     });
